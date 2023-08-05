@@ -1,0 +1,27 @@
+@media screen and (min-width: 1366px) {
+      .logo-menu {
+            width: 100%;
+            max-width: 200px;
+      }
+      .main-menu__link {
+            font-size: 4rem;
+            padding-left: 3rem;
+      }
+      .contenedor__cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 640px);
+            gap: 26px;
+            place-content: center;
+      }
+      .contenedor__principal-info-form {
+            display: flex;
+            flex-direction: row;
+      }
+      .contenedor__principal-terminos-y-condiciones .no-incluye {
+            text-align: center;
+      }
+      .vigencias {
+            display: flex;
+            justify-content: space-around;
+      }
+}
