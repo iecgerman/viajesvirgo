@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .hero-inmueble {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Mantiene todo dentro de los bordes */
+            cursor: pointer;
+        }
+
+        /* Capa oscura inicial (Overlay) */
+        .hero-inmueble::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Oscuridad al 60% */
+            z-index: 1;
+            /* Esta línea hace que el cambio de color sea suave */
+            transition: background-color 0.5s ease; 
+        }
+
+        /* EFECTO HOVER: Cuando el mouse entra, la capa se aclara */
+        .hero-inmueble:hover::before {
+            background-color: rgba(0, 0, 0, 0.3); /* Se aclara al 30% */
+        }
+
+        .contenido {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Sombra al texto para más elegancia */
+        }
+
+        h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        p { font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <div class="hero-inmueble">
+        <div class="contenido">
+            <h1>Residencia "Vista Magna"</h1>
+            <p>Pasa el mouse para ver los detalles de la fachada</p>
+        </div>
+    </div>
+
+</body>
+</html>

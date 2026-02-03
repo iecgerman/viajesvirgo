@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            font-size: 24px;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: rgb(20, 20, 20);
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            position: relative; /* Muy importante para que el ::after se posicione respecto al link */
+            padding-bottom: 5px;
+        }
+
+        .menu-link:hover {
+            color: green;
+        }
+
+        
+        /* Creamos la línea con ::after */
+        .menu-link::after {
+            content: "🙂";            
+            font-size: 48px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0; /* Empezamos con ancho cero para que no se vea */
+            height: 8px;
+            background-color: #f39c12; /* Color corporativo de Viajes Virgo */
+            transition: width 0.4s ease; /* Aquí sucede la magia del movimiento */
+        }
+
+        /* Al pasar el mouse, la línea crece al 100% */
+        .menu-link:hover::after {
+            content: "😉";       
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-link">Inicio</a></li>
+            <li><a href="#" class="menu-link">Playas</a></li>
+            <li><a href="#" class="menu-link">Tours</a></li>
+            <li><a href="#" class="menu-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
