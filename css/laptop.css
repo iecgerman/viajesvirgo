@@ -1,4 +1,8 @@
 @media screen and (min-width: 1366px) {
+      html {
+            scroll-padding-top: 11rem;
+      }
+
       /* Logo y enlaces en la misma fila */
       .main-nav {
             display: flex;
@@ -11,7 +15,7 @@
       }
 
       .main-menu__link--logo {
-            width: 200px;
+            width: 140px;
       }
 
       .main-menu {

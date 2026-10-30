@@ -433,3 +433,94 @@ footer a {
 footer a:hover {
       color: var(--amarillo-guarico);
 }
+
+/***********************************/
+/**        UNA SOLA PÁGINA        **/
+/***********************************/
+
+html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+      html {
+            scroll-behavior: auto;
+      }
+}
+
+.header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+}
+
+.main-menu__link--logo {
+      width: 120px;
+}
+
+.hero {
+      background-color: var(--cyan-texto);
+      color: var(--blanco);
+      text-align: center;
+      padding: 5rem 2rem 6rem;
+}
+
+.hero__titulo {
+      font-size: clamp(3.6rem, 9vw, 6.4rem);
+      font-weight: 900;
+      text-transform: uppercase;
+}
+
+.hero__texto {
+      max-width: 60ch;
+      margin: 1.6rem auto 3rem;
+      font-size: 2rem;
+}
+
+.hero__cta {
+      display: inline-block;
+      padding: 0.6em 1.6em;
+      border-radius: 50px;
+      background-color: var(--amarillo-guarico);
+      color: var(--dark-blue);
+      font-size: 2.4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+}
+
+.hero__cta:hover {
+      filter: brightness(0.95);
+}
+
+.seccion__titulo {
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: clamp(3rem, 6vw, 4.8rem);
+      font-weight: 900;
+      color: var(--dark-blue);
+}
+
+/* Mensajes de gracias / error: se muestran con la URL #gracias o #error */
+.aviso {
+      display: none;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--dark-blue);
+}
+
+.aviso:target {
+      display: block;
+}
+
+.aviso--error {
+      color: var(--rojo-aviso);
+}
+
+.aviso img {
+      max-width: 300px;
+      margin: 2rem auto;
+}

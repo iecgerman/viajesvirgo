@@ -1,4 +1,8 @@
 @media screen and (min-width: 768px) {
+      html {
+            scroll-padding-top: 15rem;
+      }
+
       /* Menú horizontal: ya no hace falta la hamburguesa */
       .js .menu-toggle {
             display: none;
@@ -10,7 +14,7 @@
       }
 
       .main-menu__link--logo {
-            width: 250px;
+            width: 140px;
       }
 
       .js .main-menu {

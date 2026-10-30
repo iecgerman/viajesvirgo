@@ -1,0 +1,5 @@
+# Las páginas viejas llevan a su sección en la página única (redirección 301 para Google)
+RewriteEngine On
+RewriteRule ^(playas|ciudades|cruceros|parques|contacto)/?(index\.html)?$ /#$1 [R=301,NE,L]
+RewriteRule ^(contacto|promociones)/gracias\.html$ /#gracias [R=301,NE,L]
+RewriteRule ^promociones(/.*)?$ / [R=301,L]
