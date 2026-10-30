@@ -1,18 +1,48 @@
 @media screen and (min-width: 768px) {
+      /* Menú horizontal: ya no hace falta la hamburguesa */
+      .js .menu-toggle {
+            display: none;
+      }
+
+      .main-nav__bar {
+            justify-content: center;
+            padding: 1.5rem;
+      }
+
+      .main-menu__link--logo {
+            width: 250px;
+      }
+
+      .js .main-menu {
+            display: flex;
+      }
+
       .main-menu {
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
+            padding: 0 1rem 1rem;
       }
-      .logo-menu {
-            width: 100%;
+
+      .main-menu__item {
+            padding: 1em;
       }
+
+      .main-menu__item + .main-menu__item {
+            border-top: none;
+      }
+
       .main-menu__link {
+            display: inline;
+            padding: 0;
             font-size: 2rem;
       }
+
       .card {
             padding: 20px;
       }
-      .contenedor__principal-footer {
+
+      footer {
             font-size: 1.6rem;
       }
 }
