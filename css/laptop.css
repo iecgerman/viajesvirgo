@@ -1,4 +1,4 @@
-@media screen and (min-width: 1366px) {
+@media (width >= 1366px) {
       html {
             scroll-padding-top: 11rem;
       }
@@ -25,6 +25,111 @@
 
       .main-menu__link {
             font-size: 3rem;
+      }
+
+      /* Hero con imagen de fondo para pantallas grandes */
+      .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            padding: 4rem 8%;
+            color: var(--blanco);
+            background-image:
+                  linear-gradient(
+                        90deg,
+                        rgb(25 32 56 / 82%) 0%,
+                        rgb(71 81 121 / 48%) 48%,
+                        rgb(71 81 121 / 5%) 100%
+                  ),
+                  url('../imagenes/laptop/hero-playa.webp');
+            background-size: cover;
+            background-position: center right;
+            background-repeat: no-repeat;
+      }
+
+      .hero__titulo {
+            font-size: clamp(4.8rem, 5vw, 6.8rem);
+            max-width: 14ch;
+            text-shadow: 0 2px 12px rgb(0 0 0 / 35%);
+      }
+
+      .hero__texto {
+            font-size: 2.4rem;
+            max-width: 44ch;
+            margin: 1.6rem 0 3.2rem;
+            text-shadow: 0 1px 8px rgb(0 0 0 / 45%);
+      }
+
+      .hero__cta {
+            box-shadow: 0 6px 20px rgb(0 0 0 / 25%);
+            transition:
+                  transform 0.2s ease,
+                  filter 0.2s ease;
+      }
+
+      .hero__cta:hover {
+            transform: translateY(-2px);
+      }
+
+      /* Títulos de sección más protagonistas en escritorio */
+      .seccion__titulo {
+            font-size: 4.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark-blue);
+            padding: 6rem 1rem 3rem;
+      }
+
+      /* Rejilla de 2 columnas amplia y ajustada al ancho de pantalla */
+      .contenedor__cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            max-width: 1680px;
+            width: 92%;
+            margin: 0 auto;
+            padding: 0;
+      }
+
+      .card {
+            padding: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition:
+                  opacity 0.45s ease,
+                  transform 0.45s ease;
+      }
+
+      .card__thumbnail {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+      }
+
+      .card__img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      /* Efecto Focus: al pasar el cursor sobre el contenedor, atenúa las no seleccionadas */
+      .contenedor__cards:has(.card:hover) .card:not(:hover) {
+            opacity: 0.45;
+            transform: scale(0.98);
+      }
+
+      /* Crecimiento lento de la imagen activa */
+      .card:hover .card__img {
+            transform: scale(1.07);
+      }
+
+      .card__titulo {
+            margin-top: 1.6rem;
+            font-size: 3.2rem;
       }
 
       .contenedor__principal-info-form {
